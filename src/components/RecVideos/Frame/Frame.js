@@ -13,10 +13,10 @@ const Frame = ({ video }) => {
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
-  const dateStr = video.snippet.publishedAt;
+  // const dateStr = video.snippet.publishedAt;
 
-  const date = dateStr.split("");
-  const finalDate = date.splice(0, 10);
+  // const date = dateStr.split("");
+  // const finalDate = date.splice(0, 10);
 
   return (
     <div className="video_container">
@@ -31,7 +31,7 @@ const Frame = ({ video }) => {
       </div>
 
       <h2>{video.snippet.title}</h2>
-      <h4>{finalDate}</h4>
+      <h4>{new Date(video.snippet.publishedAt).toDateString()}</h4>
       <div className="subscribe">
         <h2>{video.snippet.channelTitle}</h2>
         <button>SUBSCRIBE</button>
