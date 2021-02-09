@@ -13,11 +13,6 @@ const Frame = ({ video }) => {
 
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
-  // const dateStr = video.snippet.publishedAt;
-
-  // const date = dateStr.split("");
-  // const finalDate = date.splice(0, 10);
-
   return (
     <div className="video_container">
       <div className="iframe">
